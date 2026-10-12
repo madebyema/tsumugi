@@ -1,0 +1,100 @@
+/* 数値はFigmaの設定値ではなく、共有PNGの比率を再現する値。 */
+.works-page { --work-unit: min(.069444444vw, 1px); }
+.works-page main { max-width: none; width: 100%; }
+.works-page .section-heading h1 { font-family: var(--font-en); font-size: calc(36 * var(--pc)); line-height: 1.535; letter-spacing: .15em; font-weight: 500; }
+.works-overview { position: relative; background: var(--color-blush); padding-top: calc(55 * var(--work-unit)); padding-bottom: calc(130 * var(--work-unit)); min-height: calc(1120 * var(--work-unit)); }
+.works-overview > .section-intro { margin-top: calc(40 * var(--work-unit)); }
+/* 元素材の透明な左右余白（左17px・右6px）を表示枠の外へ出す。 */
+.works-page-line { position: absolute; left: -.7911%; top: 0; width: 101.0703%; height: calc(400 * var(--work-unit)); max-width: none; object-fit: cover; mix-blend-mode: multiply; }
+.lifestyle-feature { position: relative; width: calc(1050 * var(--work-unit)); max-width: 100%; margin: calc(90 * var(--work-unit)) auto 0; }
+.lifestyle-photo { width: calc(930 * var(--work-unit)); height: calc(584 * var(--work-unit)); border-radius: calc(30 * var(--work-unit)); }
+.lifestyle-photo img { object-position: 50% 50%; }
+.point-mobile-break { display: none; }
+.lifestyle-catch { position: absolute; right: calc(-30 * var(--work-unit)); top: 0; display: flex; flex-direction: row-reverse; gap: calc(18 * var(--work-unit)); font-size: calc(24 * var(--work-unit)); line-height: 1.6; letter-spacing: .3em; }
+.lifestyle-catch p { writing-mode: vertical-rl; white-space: nowrap; }
+/* 2つ目のコピーだけ、縦方向に1文字分下げる。 */
+.lifestyle-catch p + p { margin-top: 1em; }
+.lifestyle-card { position: relative; z-index: 2; width: calc(810 * var(--work-unit)); margin-top: calc(-175 * var(--work-unit)); margin-left: calc(360 * var(--work-unit)); padding: calc(22 * var(--work-unit)) calc(30 * var(--work-unit)); background: var(--color-cream); border-radius: calc(30 * var(--work-unit)); box-shadow: 5px 7px 10px #22100126; }
+.lifestyle-category { font-family: var(--font-serif); font-size: calc(20 * var(--work-unit)); letter-spacing: .07em; }
+.lifestyle-card h2 { font-size: calc(24 * var(--work-unit)); line-height: 1.6; letter-spacing: .15em; margin-top: calc(10 * var(--work-unit)); padding-bottom: calc(8 * var(--work-unit)); border-bottom: 1px dashed #ceb39c; width: max-content; max-width: 100%; }
+.lifestyle-description { font-size: calc(14 * var(--work-unit)); line-height: 1.85; letter-spacing: .1em; margin-top: calc(14 * var(--work-unit)); }
+.lifestyle-family { text-align: right; font-size: calc(12 * var(--work-unit)); letter-spacing: .1em; margin-top: calc(10 * var(--work-unit)); }
+.works-boundary { position: absolute; bottom: -1px; left: 0; width: 100%; height: calc(100 * var(--work-unit)); }
+.works-points { position: relative; container-type: inline-size; padding-top: calc(30 * var(--work-unit)); padding-bottom: calc(170 * var(--work-unit)); }
+.works-points > .section-intro { margin-top: calc(45 * var(--work-unit)); }
+.point-list { display: grid; gap: calc(50 * var(--work-unit)); margin: calc(50 * var(--work-unit)) auto 0; max-width: 1440px; }
+.point-item { position: relative; isolation: isolate; display: grid; grid-template-columns: 51.6% 1fr; gap: calc(50 * var(--work-unit)); align-items: center; }
+.point-photo { position: relative; z-index: 1; height: calc(535 * var(--work-unit)); border-radius: 0 calc(50 * var(--work-unit)) calc(50 * var(--work-unit)) 0; }
+.point-copy { position: relative; z-index: 1; padding-right: calc(85 * var(--work-unit)); padding-top: calc(90 * var(--work-unit)); }
+.point-number { position: absolute; top: calc(-25 * var(--work-unit)); left: 0; font-family: var(--font-serif); font-size: calc(190 * var(--work-unit)); line-height: 1; color: #ceb39c73; }
+.point-label { position: relative; font-family: var(--font-serif); font-size: calc(26 * var(--work-unit)); font-weight: 700; letter-spacing: .08em; }
+.point-copy h3 { font-size: calc(30 * var(--work-unit)); line-height: 1.6; letter-spacing: .15em; margin-top: calc(28 * var(--work-unit)); }
+.point-description { font-size: calc(16 * var(--work-unit)); line-height: 1.65; letter-spacing: .12em; margin-top: calc(25 * var(--work-unit)); }
+.point-item-02 { grid-template-columns: 1fr 47%; }
+.point-item-02 .point-photo { grid-column: 2; grid-row: 1; border-radius: calc(50 * var(--work-unit)) 0 0 calc(50 * var(--work-unit)); }
+.point-item-02 .point-copy { grid-column: 1; grid-row: 1; margin-left: calc(92 * var(--work-unit)); padding-right: 0; }
+.point-blob { position: absolute; z-index: 0; width: calc(260 * var(--work-unit)); height: auto; top: calc(-100 * var(--work-unit)); right: 0; }
+.point-item-02 .point-blob { right: calc(44%); width: calc(230 * var(--work-unit)); height: auto; top: calc(-30 * var(--work-unit)); }
+.point-item-03 .point-blob { top: auto; bottom: calc(-50 * var(--work-unit)); transform: none; }
+.point-boundary { position: absolute; bottom: -1px; width: 100%; height: calc(110 * var(--work-unit)); }
+.works-page .event { background: var(--color-blush); min-height: 0; padding-top: calc(30 * var(--work-unit)); }
+.works-page .event-banner { max-width: none; margin-top: calc(70 * var(--work-unit)); }
+/* 広い画面でも文章の位置を保ち、写真側だけ外側の余白まで描画する。 */
+@container (min-width: 1441px) {
+  .point-list { max-width: none; }
+  .point-item { grid-template-columns: minmax(0, 1fr) 743.04px 50px 646.96px minmax(0, 1fr); gap: 0; }
+  .point-photo { grid-column: 1 / 3; grid-row: 1; }
+  .point-copy { grid-column: 4; grid-row: 1; }
+  .point-item-02 { grid-template-columns: minmax(0, 1fr) 713.2px 50px 676.8px minmax(0, 1fr); }
+  .point-item-02 .point-photo { grid-column: 4 / 6; }
+  .point-item-02 .point-copy { grid-column: 2; }
+}
+@media (max-width: 767px) {
+  .works-page { --work-unit: min(.256410256vw, 1.35px); }
+  .works-page .section-heading h1 { font-size: calc(24 * var(--sp)); }
+  .works-overview { padding-top: calc(22 * var(--work-unit)); min-height: calc(464 * var(--work-unit)); }
+  .works-overview > .section-intro { margin-top: calc(25 * var(--work-unit)); }
+  .works-page-line { top: calc(-2 * var(--work-unit)); height: calc(130 * var(--work-unit)); }
+  .lifestyle-feature { width: calc(300 * var(--work-unit)); margin-top: calc(40 * var(--work-unit)); }
+  .lifestyle-photo { width: calc(256 * var(--work-unit)); height: calc(162 * var(--work-unit)); border-radius: calc(30 * var(--work-unit)); }
+  .lifestyle-catch { right: calc(-7 * var(--work-unit)); top: calc(-8 * var(--work-unit)); font-size: 14px; line-height: 1.4; letter-spacing: .12em; gap: 8px; flex-direction: row-reverse; }
+  .lifestyle-catch p + p { letter-spacing: .02em; }
+  .lifestyle-card { width: min(300px, calc(100vw - 64px)); margin-left: auto; margin-right: calc(-24 * var(--work-unit)); margin-top: calc(-27 * var(--work-unit)); border-radius: calc(15 * var(--work-unit)); padding: 16px 18px; }
+  .lifestyle-category { font-size: 10px; }
+  .lifestyle-card h2 { font-size: 14px; line-height: 1.6; margin-top: 8px; padding-bottom: 6px; letter-spacing: .04em; }
+  .lifestyle-description { font-size: 12px; line-height: 1.8; margin-top: 10px; letter-spacing: .02em; }
+  .lifestyle-description br { display: none; }
+  .lifestyle-family { font-size: 10px; line-height: 1.7; margin-top: 12px; }
+  .works-boundary { height: calc(40 * var(--work-unit)); }
+  .works-points { padding-top: calc(20 * var(--work-unit)); padding-bottom: calc(60 * var(--work-unit)); }
+  .works-points > .section-intro { margin-top: calc(50 * var(--work-unit)); }
+  .point-list { gap: calc(45 * var(--work-unit)); margin-top: calc(50 * var(--work-unit)); }
+  .point-item { grid-template-columns: 50% 1fr; gap: calc(16 * var(--work-unit)); align-items: start; }
+  .point-photo { height: calc(167 * var(--work-unit)); border-radius: 0 calc(25 * var(--work-unit)) calc(25 * var(--work-unit)) 0; }
+  .point-copy { padding-top: 0; padding-right: calc(20 * var(--work-unit)); }
+  .point-number { top: calc(-28 * var(--work-unit)); font-size: calc(60 * var(--work-unit)); }
+  .point-label { font-size: calc(10 * var(--work-unit)); }
+  .point-mobile-break { display: block; }
+  .point-heading-comma { display: none; }
+  .point-item-02 .point-copy h3 { font-size: calc(13 * var(--work-unit)); letter-spacing: .06em; }
+  .point-copy h3 { font-size: calc(14 * var(--work-unit)); margin-top: calc(14 * var(--work-unit)); line-height: 1.5; letter-spacing: .12em; }
+  .point-description { font-size: calc(10 * var(--work-unit)); line-height: 1.65; margin-top: calc(12 * var(--work-unit)); letter-spacing: .12em; }
+  .point-item-02 { grid-template-columns: 1fr 50%; }
+  .point-item-02 .point-photo { border-radius: calc(25 * var(--work-unit)) 0 0 calc(25 * var(--work-unit)); }
+  .point-item-02 .point-copy { margin-left: calc(17 * var(--work-unit)); padding-right: calc(8 * var(--work-unit)); }
+  .point-blob { width: calc(54 * var(--work-unit)); height: auto; top: calc(-15 * var(--work-unit)); right: 0; }
+  .point-item-02 .point-blob { width: calc(71 * var(--work-unit)); height: auto; right: 40%; top: calc(-35 * var(--work-unit)); }
+  .point-item-03 .point-blob { bottom: auto; top: calc(-20 * var(--work-unit)); }
+  .point-boundary { height: calc(45 * var(--work-unit)); }
+  .works-page .event { padding-top: calc(20 * var(--work-unit)); }
+  .works-page .event > .section-intro { font-size: calc(12 * var(--sp)); margin-top: calc(30 * var(--work-unit)); }
+  .works-page .event-banner { margin-top: calc(45 * var(--work-unit)); }
+
+}
+@media (min-width: 768px) and (max-width: 1100px) {
+  .point-description { font-size: 12px; letter-spacing: .04em; }
+  .point-copy h3 { font-size: clamp(18px, 2.08vw, 24px); }
+  .point-photo { min-height: 300px; }
+  .lifestyle-description { font-size: 11px; }
+  .lifestyle-description br { display: none; }
+}

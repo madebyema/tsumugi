@@ -1,0 +1,67 @@
+.event { min-height: calc(1010 * var(--pc)); position: relative; }
+.event-line { position: absolute; width: calc(1549 * var(--pc)); height: calc(516 * var(--pc)); max-width: none; left: calc(-28 * var(--pc)); top: calc(-283 * var(--pc)); mix-blend-mode: multiply; }
+.event > .section-intro { font-size: calc(24 * var(--pc)); margin-top: calc(50 * var(--pc)); }
+/* 1480 × 646の基準キャンバスを、1つの倍率で縮小する。 */
+.event-banner { width: 100%; max-width: 1480px; aspect-ratio: 1480 / 646; margin: calc(50 * var(--pc)) auto 0; position: relative; overflow: hidden; }
+.event-visual { --pc: 1px; position: absolute; inset: 0 auto auto 0; width: 1480px; height: 646px; transform-origin: top left; }
+.event-photo { position: absolute; left: calc(-28 * var(--pc)); top: calc(27 * var(--pc)); width: calc(1086 * var(--pc)); height: calc(619 * var(--pc)); }
+.event-photo img { width: 105.8%; max-width: none; object-position: 50% 30%; }
+.event-panel { position: absolute; left: calc(703 * var(--pc)); top: 0; width: calc(833 * var(--pc)); height: calc(676 * var(--pc)); }
+.event-panel img { width: 100%; height: 100%; max-width: none; }
+.event-content { position: absolute; top: calc(214 * var(--pc)); left: calc(922 * var(--pc)); width: calc(441 * var(--pc)); color: #60310b; }
+.event-eyebrow { font-size: calc(12 * var(--pc)); letter-spacing: .18em; text-align: center; line-height: 1.535; width: max-content; }
+.event-content h3 { font-size: calc(36 * var(--pc)); letter-spacing: .18em; line-height: 1.535; }
+.event-description { border-top: 1px solid #ad8364; border-bottom: 1px solid #ad8364; margin-top: calc(15 * var(--pc)); padding-block: calc(20 * var(--pc)); font-size: calc(16 * var(--pc)); letter-spacing: .08em; line-height: 1.05; white-space: nowrap; }
+.event-description p + p { margin-top: calc(16 * var(--pc)); }
+.event-notes { font-size: calc(16 * var(--pc)); letter-spacing: .15em; margin-top: calc(20 * var(--pc)); white-space: nowrap; }
+.event-button { display: flex; position: relative; width: calc(306 * var(--pc)); height: calc(54 * var(--pc)); margin: calc(55 * var(--pc)) auto 0; font-size: calc(16 * var(--pc)); }
+.event-badge { position: absolute; left: calc(1261 * var(--pc)); top: calc(84 * var(--pc)); width: calc(143 * var(--pc)); height: calc(142 * var(--pc)); color: #60310b; }
+.event-badge > img { position: absolute; width: calc(138 * var(--pc)); height: calc(138 * var(--pc)); }
+.badge-fill { left: calc(5 * var(--pc)); top: calc(4 * var(--pc)); }
+.event-badge > div { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: calc(8 * var(--pc)); }
+.event-badge p:first-child { font-size: calc(20 * var(--pc)); letter-spacing: -.04em; }
+.event-badge p:last-child { font-size: calc(15 * var(--pc)); line-height: 1.65; letter-spacing: .04em; }
+.event-badge .badge-ray { height: 2px; transform-origin: left; }
+.event-badge .badge-ray-1 { top: calc(5.81 * var(--pc)); left: calc(-5.02 * var(--pc)); width: calc(18.439 * var(--pc)); transform: rotate(40.6deg); }
+.event-badge .badge-ray-2 { top: 0; left: calc(10.67 * var(--pc)); width: calc(11.314 * var(--pc)); transform: rotate(56.62deg); }
+.event-badge .badge-ray-3 { top: calc(21.75 * var(--pc)); left: calc(-8 * var(--pc)); width: calc(11.314 * var(--pc)); transform: rotate(19.53deg); }
+.event-badge .badge-star { width: calc(6 * var(--pc)); height: calc(6 * var(--pc)); top: 0; left: calc(-11 * var(--pc)); }
+
+.event-date { display: none; }
+.event-banner--readable .event-notes span + span::before { content: " ｜ "; }
+
+@media (max-width: 767px) {
+  .event-banner--readable { aspect-ratio: auto; }
+  .event-banner--readable .event-visual { position: relative; width: 100%; height: auto; }
+  .event-banner--readable .event-photo img { width: 100%; }
+  .event-banner--readable .event-content { position: relative; top: auto; left: auto; }
+  .event-banner--readable .event-eyebrow { line-height: 1.6; letter-spacing: .12em; }
+  .event-banner--readable .event-content h3 { font-size: 20px; letter-spacing: .12em; }
+  .event-banner--readable .event-description { white-space: normal; }
+  .event-banner--readable .event-description p + p { margin-top: 4px; }
+  .event-banner--readable .event-notes { line-height: 1.8; white-space: normal; }
+  .event-banner--readable .event-button { max-width: 100%; }
+  /* 共通SP CTA：完成済みWORKSの写真背景デザイン。 */
+  .event-banner--readable .event-visual { isolation: isolate; background: none; }
+  .event-banner--readable .event-photo { position: absolute; inset: 0; width: 100%; height: 100%; z-index: -2; }
+  .event-banner--readable .event-photo img { object-position: 50% 50%; }
+  .event-banner--readable .event-visual::before { content: ""; position: absolute; inset: 0; background: rgb(35 12 3 / 60%); z-index: -1; pointer-events: none; }
+  .event-banner--readable .event-panel { display: none; }
+  .event-banner--readable .event-content { margin: 0 auto; width: calc(100% - 64px); max-width: 280px; padding: 28px 0 26px; color: #FFF7F2; }
+  .event-banner--readable .event-eyebrow { font-size: 8px; }
+  .event-banner--readable .event-content h3 { line-height: 1.5; }
+  .event-banner--readable .event-heading { display: flex; align-items: flex-end; gap: 16px; }
+  .event-banner--readable .event-heading h3 { flex: 0 0 auto; }
+  .event-banner--readable .event-date { display: block; font-size: 10px; line-height: 1.8; letter-spacing: .07em; white-space: nowrap; padding-bottom: 2px; }
+  .event-banner--readable .event-description { font-size: 10px; line-height: 1.8; border-color: rgb(255 247 242 / 65%); margin-top: 8px; padding-block: 6px; letter-spacing: .03em; }
+  .event-banner--readable .event-notes { display: flex; justify-content: center; align-items: center; gap: 8px; letter-spacing: .03em; margin-top: 12px; font-size: 9px; }
+  .event-banner--readable .event-notes span { white-space: nowrap; }
+  .event-banner--readable .event-notes span + span { border-left: 1px solid rgb(255 247 242 / 55%); padding-left: 8px; }
+  .event-banner--readable .event-notes span + span::before { content: none; }
+  .event-banner--readable .event-button { width: 260px; height: 34px; padding: 0 18px; border-radius: 17px; margin-top: 22px; gap: 18px; font-size: 12px; background: #FFF7F2; color: var(--color-brand); }
+  .event-banner--readable .event-badge { display: none; }
+  .event-banner--readable .badge-fill { display: none; }
+  .event-banner--readable .badge-outline,
+  .event-banner--readable .badge-ray,
+  .event-banner--readable .badge-star { filter: brightness(0) invert(1); }
+}
