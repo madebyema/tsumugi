@@ -1,21 +1,22 @@
 /* EVENT専用。外側は全幅、写真・フォームは最大幅で整える。 */
 .event-page { --event-unit: min(.069444444vw, 1px); background: var(--color-blush); }
 .event-page main { max-width: none; width: 100%; }
-.event-page .section-heading h1 { font-family: var(--font-en); font-size: 36px; line-height: 1.535; letter-spacing: .15em; }
+.event-page .section-heading h1 { font-family: var(--font-jp); font-size: 32px; line-height: 1.535; letter-spacing: .15em; }
 .event-overview { position: relative; padding: 100px 32px 88px; background: var(--color-blush); }
 .event-page-line { position: absolute; top: 0; left: 0; width: 100%; height: 310px; max-width: none; object-fit: cover; pointer-events: none; }
 .open-house-card { position: relative; display: grid; grid-template-columns: 53% 47%; max-width: 1350px; min-height: 530px; margin: 140px auto 0; border-radius: 50px; overflow: hidden; background: #FFF7F2; color: var(--color-brand); }
 .open-house-photo { position: relative; min-width: 0; }
 .open-house-photo img { position: absolute; inset: 0; object-position: 50% 38%; }
 .open-house-information { padding: 80px 30px 60px; align-self: center; }
-.open-house-eyebrow { font-family: var(--font-serif); font-size: 14px; letter-spacing: .13em; }
-.open-house-information h2 { font-size: 36px; letter-spacing: .18em; line-height: 1.6; border-bottom: 1px solid #a77756; padding-bottom: 10px; }
+.open-house-eyebrow { font-family: var(--font-jp); font-size: 14px; letter-spacing: .13em; }
+.open-house-information h2 { font-size: 36px; font-weight: 700; letter-spacing: .18em; line-height: 1.6; border-bottom: 1px solid #a77756; padding-bottom: 10px; }
 .open-house-description { margin-top: 20px; font-size: 16px; line-height: 1.6; letter-spacing: .1em; }
 .open-house-details { display: grid; gap: 16px; margin-top: 52px; font-size: 18px; letter-spacing: .12em; }
 .open-house-details li { display: flex; gap: 24px; align-items: flex-start; }
 .open-house-details img { width: 22px; height: 22px; flex-shrink: 0; object-fit: contain; margin-top: 3px; }
 .visit-benefits { padding: 50px 32px 38px; background: #FFF7F2; color: var(--color-brand); }
 .visit-benefits > h2 { display: flex; align-items: center; justify-content: center; gap: 32px; max-width: 1250px; margin: 0 auto 50px; font-size: 28px; line-height: 1.5; letter-spacing: .15em; text-align: center; }
+.visit-benefits .benefits-heading-comma { display: inline-block; inline-size: .55em; margin-inline-start: -.08em; margin-inline-end: .03em; letter-spacing: 0; }
 .visit-benefits > h2::before, .visit-benefits > h2::after { content: ""; height: 1px; flex: 1; background: currentColor; }
 .visit-benefits-list { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); max-width: 1350px; margin: auto; }
 .visit-benefit { text-align: center; padding: 0 20px; }
@@ -23,7 +24,7 @@
 .visit-benefit > img { width: 65px; height: 65px; object-fit: contain; margin: 0 auto 16px; }
 .visit-benefit h3 { font-size: 20px; letter-spacing: .12em; line-height: 1.6; }
 .visit-benefit p { font-size: 16px; line-height: 1.6; letter-spacing: .12em; margin-top: 18px; }
-.reservation-section { background: var(--color-blush); padding: 60px 32px 94px; min-height: 1460px; scroll-margin-top: 24px; }
+.reservation-section { background: var(--color-blush); padding: 60px 32px 94px; min-height: 0; scroll-margin-top: 24px; }
 .reservation-form { width: 100%; max-width: 606px; margin: 92px auto 0; }
 .form-field + .form-field { margin-top: 44px; }
 .form-field label { display: block; font-size: 20px; letter-spacing: .3em; line-height: 1.6; margin-bottom: 10px; }
@@ -52,16 +53,16 @@
   .visit-benefit p { font-size: 13px; letter-spacing: .03em; }
 }
 @media (max-width: 767px) {
-  .event-page .section-heading h1 { font-size: 24px; }
+  .event-page .section-heading h1 { font-size: 18px; }
   .event-overview { padding: 24px 25px 20px; }
   .event-page-line { display: none; }
   .open-house-card { grid-template-columns: 48% 52%; max-width: 540px; min-height: 0; margin-top: 48px; border-radius: 24px; }
   .open-house-photo img { transform: scaleX(-1); object-position: 50% 50%; }
-  .open-house-information { padding: 22px 10px; }
-  .open-house-eyebrow { font-size: 7px; letter-spacing: .08em; }
+  .open-house-information { padding: 18px 10px; }
+  .open-house-eyebrow { font-size: 8px; letter-spacing: .08em; }
   .open-house-information h2 { font-size: 16px; letter-spacing: .12em; padding-bottom: 6px; }
   .open-house-description { font-size: 10px; line-height: 1.6; letter-spacing: .02em; margin-top: 8px; }
-  .open-house-details { font-size: 9px; line-height: 1.6; letter-spacing: 0; gap: 6px; margin-top: 14px; }
+  .open-house-details { font-size: 10px; line-height: 1.6; letter-spacing: 0; gap: 6px; margin-top: 14px; }
   .open-house-details li { gap: 5px; }
   .open-house-details img { width: 12px; height: 12px; margin-top: 1px; }
   .visit-benefits { padding: 22px 22px 25px; }
@@ -71,7 +72,7 @@
   .visit-benefit > img { width: 27px; height: 27px; margin-bottom: 8px; }
   .visit-benefit h3 { font-size: 10px; line-height: 1.5; letter-spacing: 0; }
   .visit-benefit p { font-size: 9px; letter-spacing: 0; margin-top: 8px; line-height: 1.6; }
-  .reservation-section { padding: 24px 25px 72px; min-height: 0; }
+  .reservation-section { padding: 24px 25px 52px; min-height: 0; }
   .reservation-form { max-width: 270px; margin-top: 50px; }
   .form-field + .form-field { margin-top: 30px; }
   .form-field label { font-size: 12px; line-height: 1.7; letter-spacing: .25em; margin-bottom: 5px; }

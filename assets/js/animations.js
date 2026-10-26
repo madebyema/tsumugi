@@ -24,7 +24,7 @@ async function setupIntro() {
     if (!reducedMotion.matches) return;
     intro.kill();
     screen.hidden = true;
-    gsap.set([heroImage, ...document.querySelectorAll(".hero-title > span")], { clearProps: "all" });
+    gsap.set([heroImage, ...document.querySelectorAll(".hero-title > span, .hero-description")], { clearProps: "all" });
   };
   reducedMotion.addEventListener("change", cancelIntro);
   if (firstVisit) {
@@ -34,9 +34,9 @@ async function setupIntro() {
     try { sessionStorage.setItem("tsumugi-intro-seen", "1"); } catch { /* 任意の補助機能。 */ }
   }
   intro.fromTo(heroImage, { opacity: 0, scale: 1.04 }, { opacity: 1, scale: 1, duration: 1.4 }, firstVisit ? "-=.2" : 0)
-    .fromTo(".hero-title > span", { opacity: 0, y: 8 }, { opacity: 1, y: 0, stagger: .18, duration: 1.1 }, "-=.8")
+    .fromTo(".hero-title > span, .hero-description", { opacity: 0, y: 8 }, { opacity: 1, y: 0, stagger: .18, duration: 1.1 }, "-=.8")
     .eventCallback("onComplete", () => {
-      gsap.set([heroImage, ...document.querySelectorAll(".hero-title > span")], { clearProps: "all" });
+      gsap.set([heroImage, ...document.querySelectorAll(".hero-title > span, .hero-description")], { clearProps: "all" });
       reducedMotion.removeEventListener("change", cancelIntro);
       setupHeroSlideshow();
     });
@@ -159,9 +159,10 @@ function setupPerformanceMotion() {
 
 function setupVoiceMotion() {
   document.querySelectorAll(".voice-story").forEach((story) => {
-    sectionTimeline(story).from(story.querySelector(".voice-photo"), { autoAlpha: 0, duration: 1.2 })
-      .from(story.querySelector(".voice-photo img"), { scale: 1.02, duration: 1.3 }, "<")
-      .from(story.querySelector(".voice-card"), { autoAlpha: 0, y: 10, duration: 1.1 }, "-=.65");
+    sectionTimeline(story)
+      .from(story.querySelector(".voice-category"), { autoAlpha: 0, y: 8 })
+      .from(story.querySelector(".voice-card"), { autoAlpha: 0, y: 10, duration: 1.1 }, "-=.8")
+      .from(story.querySelector(".voice-photo img"), { scale: 1.02, duration: 1.3 }, "<");
   });
 }
 

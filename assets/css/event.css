@@ -10,11 +10,11 @@
 .event-panel img { width: 100%; height: 100%; max-width: none; }
 .event-content { position: absolute; top: calc(214 * var(--pc)); left: calc(922 * var(--pc)); width: calc(441 * var(--pc)); color: #60310b; }
 .event-eyebrow { font-size: calc(12 * var(--pc)); letter-spacing: .18em; text-align: center; line-height: 1.535; width: max-content; }
-.event-content h3 { font-size: calc(36 * var(--pc)); letter-spacing: .18em; line-height: 1.535; }
+.event-content h3 { font-size: calc(36 * var(--pc)); font-weight: 700; letter-spacing: .12em; line-height: 1.535; }
 .event-description { border-top: 1px solid #ad8364; border-bottom: 1px solid #ad8364; margin-top: calc(15 * var(--pc)); padding-block: calc(20 * var(--pc)); font-size: calc(16 * var(--pc)); letter-spacing: .08em; line-height: 1.05; white-space: nowrap; }
 .event-description p + p { margin-top: calc(16 * var(--pc)); }
 .event-notes { font-size: calc(16 * var(--pc)); letter-spacing: .15em; margin-top: calc(20 * var(--pc)); white-space: nowrap; }
-.event-button { display: flex; position: relative; width: calc(306 * var(--pc)); height: calc(54 * var(--pc)); margin: calc(55 * var(--pc)) auto 0; font-size: calc(16 * var(--pc)); }
+.event-button { display: flex; position: relative; width: calc(306 * var(--pc)); height: calc(54 * var(--pc)); margin: calc(55 * var(--pc)) auto 0; font-size: calc(16 * var(--pc)); background: var(--color-accent); }
 .event-badge { position: absolute; left: calc(1261 * var(--pc)); top: calc(84 * var(--pc)); width: calc(143 * var(--pc)); height: calc(142 * var(--pc)); color: #60310b; }
 .event-badge > img { position: absolute; width: calc(138 * var(--pc)); height: calc(138 * var(--pc)); }
 .badge-fill { left: calc(5 * var(--pc)); top: calc(4 * var(--pc)); }
@@ -64,4 +64,8 @@
   .event-banner--readable .badge-outline,
   .event-banner--readable .badge-ray,
   .event-banner--readable .badge-star { filter: brightness(0) invert(1); }
+}
+
+@media (hover: hover) and (pointer: fine) and (min-width: 768px) {
+  .event-button:hover { background: #718439; }
 }

@@ -5,21 +5,25 @@
   --color-sand: #e7cdb8;
   --color-brown: #855e3f;
   --color-brand: #7f5532;
+  --color-accent: #879a45;
+  --color-card: #fff9f3;
   --color-ink: #221001;
-  --font-jp: "Kiwi Maru", "Hiragino Maru Gothic ProN", serif;
-  --font-en: "Zen Maru Gothic", sans-serif;
-  --font-serif: "Source Serif Pro", Georgia, serif;
+  --font-jp: "Gothic A1", sans-serif;
+  --font-en: "Gothic A1", sans-serif;
+  --font-serif: "Gothic A1", sans-serif;
   --pc: min(.067567568vw, 1px);
   --sp: clamp(.82px, .256410256vw, 1.38px);
 }
 *, *::before, *::after { box-sizing: border-box; }
 html { scroll-behavior: smooth; scroll-padding-top: 24px; }
+body, button, input, select, textarea { font-kerning: normal; }
 body { margin: 0; background: var(--color-cream); color: var(--color-ink); font-family: var(--font-jp); font-weight: 500; }
 h1, h2, h3, p, ul, dl, dd { margin: 0; }
 h1, h2, h3 { font-weight: inherit; }
 ul { list-style: none; padding: 0; }
 a { color: inherit; text-decoration: none; }
 button { font: inherit; color: inherit; cursor: pointer; }
+input, select, textarea { font-family: var(--font-jp); }
 button, a { -webkit-tap-highlight-color: transparent; }
 button { border: 0; }
 img { display: block; max-width: 100%; }
@@ -28,7 +32,10 @@ picture { display: block; }
 :focus-visible { outline: 3px solid var(--color-brand); outline-offset: 5px; }
 main { max-width: 1480px; margin-inline: auto; overflow: clip; }
 .decoration { pointer-events: none; user-select: none; }
-.comma { letter-spacing: -.3em; }
+/* Gothic A1ではpaltで読点の幅が変わらないため、読点だけ半角送りに。
+   直前の文字とまとめ、行頭に読点だけが残る改行を防ぐ。フォント・本文の字間は維持。 */
+.jp-comma-unit { white-space: nowrap; }
+.jp-comma { display: inline-block; inline-size: .5em; font-feature-settings: "halt" 1; letter-spacing: 0; }
 .skip-link { position: fixed; top: 10px; left: 10px; z-index: 100; padding: 12px 20px; background: var(--color-cream); transform: translateY(-150%); }
 .skip-link:focus { transform: translateY(0); }
 .photo-frame { overflow: hidden; }
