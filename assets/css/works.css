@@ -1,7 +1,7 @@
 /* 数値はFigmaの設定値ではなく、共有PNGの比率を再現する値。 */
 .works-page { --work-unit: min(.069444444vw, 1px); }
 .works-page main { max-width: none; width: 100%; }
-.works-page .section-heading h1 { font-family: var(--font-jp); font-size: calc(32 * var(--pc)); line-height: 1.535; letter-spacing: .15em; font-weight: 500; }
+.works-page .section-heading h1 { font-family: var(--font-en); font-size: calc(32 * var(--pc)); line-height: 1.535; letter-spacing: .15em; font-weight: 500; }
 .works-overview { position: relative; background: var(--color-blush); padding-top: calc(55 * var(--work-unit)); padding-bottom: calc(130 * var(--work-unit)); min-height: calc(1120 * var(--work-unit)); }
 .works-overview > .section-intro { margin-top: calc(40 * var(--work-unit)); }
 /* 元素材の透明な左右余白（左17px・右6px）を表示枠の外へ出す。 */
@@ -13,7 +13,7 @@
 .lifestyle-catch { position: absolute; right: calc(-30 * var(--work-unit)); top: 0; display: flex; flex-direction: row-reverse; gap: calc(18 * var(--work-unit)); font-size: calc(24 * var(--work-unit)); line-height: 1.6; letter-spacing: .3em; }
 .lifestyle-catch p { writing-mode: vertical-rl; text-orientation: mixed; font-feature-settings: normal; white-space: nowrap; }
 /* 2つ目のコピーだけ、縦方向に1文字分下げる。 */
-.lifestyle-catch .vertical-punctuation { font-family: "Hiragino Kaku Gothic ProN", "Yu Gothic", serif; font-feature-settings: "vert" 1, "vrt2" 1; }
+.lifestyle-catch .vertical-punctuation { font-family: var(--font-jp); font-feature-settings: "vert" 1, "vrt2" 1; }
 .lifestyle-catch .vertical-comma { position: relative; left: 1.5px; }
 .lifestyle-catch p + p { margin-top: 1em; }
 .lifestyle-card { position: relative; z-index: 2; width: calc(810 * var(--work-unit)); margin-top: calc(-175 * var(--work-unit)); margin-left: calc(360 * var(--work-unit)); padding: calc(22 * var(--work-unit)) calc(30 * var(--work-unit)); background: #fff3ea; border-radius: calc(30 * var(--work-unit)); box-shadow: 5px 7px 10px #22100126; }
@@ -104,4 +104,13 @@
 
 @media (min-width: 768px) {
   .works-page .footer-inner { padding-top: calc(130 * var(--pc)); }
+}
+
+/* 指定された横書き3箇所のみ。通常文字の字間・縦書きには適用しない。 */
+.works-optical-intro { --punctuation-trim: .18em; }
+.works-optical-heading { --punctuation-trim: .06em; }
+.works-optical-punctuation { display: inline-block; inline-size: .5em; font-feature-settings: "halt" 1; letter-spacing: 0; margin-inline-start: calc(-1 * var(--punctuation-trim)); }
+.works-optical-middle-dot { inline-size: 1em; font-feature-settings: normal; margin-inline-start: calc(-.2em - var(--punctuation-trim)); margin-inline-end: -.2em; }
+@media (max-width: 767px) {
+  .works-optical-heading { --punctuation-trim: 0em; }
 }

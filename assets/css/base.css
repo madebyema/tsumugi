@@ -8,14 +8,14 @@
   --color-accent: #879a45;
   --color-card: #fff9f3;
   --color-ink: #221001;
-  --font-jp: "Gothic A1", sans-serif;
+  --font-jp: "Zen Kaku Gothic New", sans-serif;
   --font-en: "Gothic A1", sans-serif;
-  --font-serif: "Gothic A1", sans-serif;
+  --font-serif: "Zen Kaku Gothic New", sans-serif;
   --pc: min(.067567568vw, 1px);
   --sp: clamp(.82px, .256410256vw, 1.38px);
 }
 *, *::before, *::after { box-sizing: border-box; }
-html { scroll-behavior: smooth; scroll-padding-top: 24px; }
+html { scroll-behavior: smooth; scroll-padding-top: calc(81px + 24px); }
 body, button, input, select, textarea { font-kerning: normal; }
 body { margin: 0; background: var(--color-cream); color: var(--color-ink); font-family: var(--font-jp); font-weight: 500; }
 h1, h2, h3, p, ul, dl, dd { margin: 0; }

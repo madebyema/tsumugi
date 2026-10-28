@@ -8,7 +8,7 @@
 .hero-media .hero-slide-exterior { object-position: 50% 56%; }
 .hero-title { position: absolute; z-index: 1; left: calc(95 * var(--pc)); top: calc(340 * var(--pc)); color: var(--color-cream); font-size: calc(45 * var(--pc)); line-height: 1.5; letter-spacing: .06em; text-shadow: 1px 2px 6px #22100140; font-weight: 700; }
 .hero-title > span { display: block; }
-.hero-title b { font-size: calc(64 * var(--pc)); font-weight: 800; }
+.hero-title b { font-size: calc(64 * var(--pc)); font-weight: 700; }
 .hero-description { position: absolute; z-index: 1; top: calc(555 * var(--pc)); left: calc(95 * var(--pc)); color: var(--color-cream); font-size: calc(20 * var(--pc)); letter-spacing: .08em; line-height: 1.8; font-weight: 600; }
 .hero-description > span { display: block; }
 .concept { min-height: calc(717 * var(--pc)); padding: calc(60 * var(--pc)) calc(50 * var(--pc)); position: relative; }
@@ -38,7 +38,7 @@
 .work-card-featured .work-heading { display: block; }
 .work-copy { font-size: calc(16 * var(--pc)); line-height: 1.7; letter-spacing: .08em; }
 .work-copy > p { min-height: calc(61 * var(--pc)); }
-.work-details { margin-top: calc(20 * var(--pc)); font-size: 11px; line-height: 1.6; letter-spacing: .03em; }
+.work-details { margin-top: calc(20 * var(--pc)); font-size: 14px; line-height: 1.6; letter-spacing: .03em; }
 .work-details > div { display: flex; }
 .work-details dt { width: 5.8em; flex-shrink: 0; }
 .work-details dd::before { content: "|"; display: inline-block; margin-right: .9em; }
@@ -123,7 +123,7 @@
   .work-heading h3 { font-size: 20px; line-height: 1.6; margin-top: 8px; }
   .work-copy { order: 2; font-size: 14px; letter-spacing: .03em; margin-top: 18px; line-height: 1.7; }
   .work-copy > p { min-height: 0; }
-  .work-details { margin-top: 20px; font-size: 11px; line-height: 1.6; }
+  .work-details { margin-top: 20px; font-size: 14px; line-height: 1.6; }
   .work-button, .work-card-featured .work-button { order: 3; font-size: 14px; align-self: center; margin-top: 30px; padding: 14px 24px; }
   .works-lines { display: none; }
   .performance { min-height: 0; padding-top: 30px; padding-bottom: 70px; }
@@ -164,7 +164,8 @@
   .work-heading h3 { font-size: clamp(14px,1.62vw,18px); }
   .work-card-featured { grid-template-columns: 65% 1fr; column-gap: 4%; }
   .work-card-featured .work-button { font-size: 10px; padding: 10px 12px; letter-spacing: .03em; }
-  .work-details { font-size: 10px; }
+  .work-details { font-size: 14px; }
+  .work-details dt { width: 4.7em; }
   .performance-copy h3 { font-size: 24px; }
   .performance-copy > p { font-size: 12px; }
   .performance-grade > p:last-child { font-size: 12px; }
